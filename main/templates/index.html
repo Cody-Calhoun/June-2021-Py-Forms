@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Form and Session</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/create_user" method="post">
+            {% csrf_token %}
+            <h1 class="mb-3 mt-4">Create a Taco Truck 🌮</h1>
+            <div class="row">
+                <label for="truck_name" class="form-label col-sm-2">Truck Name:</label>
+                <input type="text" class="form-control col-sm-4" name="truck_name">
+            </div>
+            <div class="row">
+                <label for="region" class="form-label col-sm-2">Food Region:</label>
+                <input type="text" class="form-control col-sm-4" name="region">
+            </div>
+            <div class="row">
+                <label for="special" class="form-label col-sm-2">Speciality:</label>
+                <input type="text" class="form-control col-sm-4" name="special">
+            </div>
+            <button class="btn btn-danger col-md-4 mt-4">Create Taco Truck</button>
+
+        </form>
+    </div>
+</body>
+</html>
